@@ -17,7 +17,7 @@ import styles from "./layout.module.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "Inspirational Quote Generator",
+  title: "Zen Dog - Inspirational Quote Generator",
   description: "Go further with drops of inspiration!",
 }
 
