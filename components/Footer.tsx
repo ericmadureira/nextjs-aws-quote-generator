@@ -1,13 +1,17 @@
+import Link from 'next/link'
+
 import styles from './Footer.module.css'
 
 interface FooterProps {
-  children: React.ReactNode
+  generatedQuotes: number | null
 }
 
-export default function Footer({ children }: FooterProps) {
+export default function Footer({ generatedQuotes }: FooterProps) {
   return (
     <div className={styles['footer-container']}>
-      {children}
+      Quotes generated: {generatedQuotes}
+      <br />
+      Developed with 🧠 by <Link href="https://www.linkedin.com/in/eric-madureira/" target="_blank" rel="noopener noreferrer">Eric Madureira</Link>
     </div>
   )
 }
