@@ -30,12 +30,8 @@ export default function RootLayout({
       <body className={inter.className}>
         <main className={styles['main-container']}>
           {children}
-
           <BackgroundImage1 />
           <BackgroundImage2 />
-
-          {/* <QuoteGenerator /> */}
-
           <Footer generatedQuotes={generatedQuotes} />
         </main>
       </body>

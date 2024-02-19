@@ -1,9 +1,15 @@
 .main-container {
+  /* size */
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* background */
   background: linear-gradient(to right, #000046, #1cb5e0);
   background-size: 400% 400%;
   animation: gradient 6s ease infinite;
-  height: 100vh;
-  width: 100vw;
 
   @keyframes gradient {
     0% {
