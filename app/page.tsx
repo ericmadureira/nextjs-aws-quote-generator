@@ -1,9 +1,9 @@
-import Image from 'next/image'
+import QuoteGenerator from '@/components/QuoteGenerator'
 
 export default function Home() {
   return (
     <div className=''>
-      ZenDog - Inspiring Quote generator
+      <QuoteGenerator />
     </div>
   )
 }
