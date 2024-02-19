@@ -1,0 +1,15 @@
+.generate-quote-button {
+  width: 200px;
+  height: 50px;
+  border-radius: 10px;
+  border: none;
+
+  background-color: #004EC2;
+  color: white;
+
+  transition: transform 0.5s ease-in-out;
+  &:hover {
+    transform: scale(1.05);
+    cursor: pointer;
+  }
+}
