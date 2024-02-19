@@ -5,6 +5,12 @@
   padding: 20px;
   border-radius: 10px;
 
+  /* layout */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   /* glass effect */
   background: rgba( 255, 255, 255, 0.35 );
   box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
@@ -24,6 +30,7 @@
 .subtitle {
   color: white;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 .api-link {

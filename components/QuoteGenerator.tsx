@@ -1,4 +1,8 @@
+// libs
 import Link from 'next/link'
+
+// components
+import GenerateQuoteButton from './GenerateQuoteButton'
 
 // styles
 import styles from './QuoteGenerator.module.css'
@@ -11,6 +15,7 @@ export default function QuoteGenerator() {
     <div className={styles['container-card']}>
       <Title />
       <Subtitle />
+      <GenerateQuoteButton />
     </div>
   )
 }
