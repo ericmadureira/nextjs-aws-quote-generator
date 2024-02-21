@@ -1,7 +1,8 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
+import { Amplify } from 'aws-amplify';
 
-import Link from "next/link"
+import amplifyconfig from '@/src/amplifyconfiguration.json';
 
 // Components
 import Footer from "@/components/Footer"
@@ -10,6 +11,8 @@ import { BackgroundImage1,BackgroundImage2 } from "@/components/BackgroundImage"
 // Styles
 import "./globals.css"
 import styles from "./layout.module.css"
+
+Amplify.configure(amplifyconfig);
 
 const inter = Inter({ subsets: ["latin"] })
 
