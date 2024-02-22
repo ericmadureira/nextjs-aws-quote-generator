@@ -1,10 +1,8 @@
 import type { Metadata } from "next"
 import { Inter } from "next/font/google"
 
-// Components
-import { BackgroundImage1,BackgroundImage2 } from "@/components/BackgroundImage"
+import BaseLayout from "@/components/BaseLayout"
 
-// Styles
 import "./globals.css"
 import styles from "./layout.module.css"
 
@@ -25,8 +23,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <main className={styles['main-container']}>
           {children}
-          <BackgroundImage1 />
-          <BackgroundImage2 />
+          <BaseLayout />
         </main>
       </body>
     </html>
