@@ -1,9 +1,18 @@
+'use client'
 import styles from './GenerateQuoteButton.module.css'
 
-export default function GenerateQuoteButton() {
+interface GenerateQuoteButtonProps {
+  handleOpenModal: (e: React.SyntheticEvent) => void
+  isQuoteLoading: boolean
+}
+
+export default function GenerateQuoteButton({
+  handleOpenModal,
+  isQuoteLoading,
+}: GenerateQuoteButtonProps) {
   return (
-    <button className={styles['generate-quote-button']}>
-      Make a Quote
+    <button className={styles['generate-quote-button']} onClick={handleOpenModal}>
+      { isQuoteLoading ? 'Loading...' : 'Make a Quote'}
     </button>
   )
 }

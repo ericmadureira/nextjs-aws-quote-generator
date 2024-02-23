@@ -7,9 +7,17 @@ import styles from './QuoteResultModal.module.css'
 interface QuoteResultModalProps {
   isModalOpen: boolean
   handleCloseModal: () => void
+  isQuoteLoading: boolean
+  receivedQuote: string | null
+  handleDownload: () => void
 }
 
-const QuoteResultModal = ({ isModalOpen, handleCloseModal }: QuoteResultModalProps) => {
+const QuoteResultModal = ({
+  isModalOpen,
+  handleCloseModal,
+  isQuoteLoading,
+  receivedQuote,
+}: QuoteResultModalProps) => {
   return (
     <Modal
       className={styles['modal-backdrop']}
@@ -21,8 +29,17 @@ const QuoteResultModal = ({ isModalOpen, handleCloseModal }: QuoteResultModalPro
     >
       <div className={styles['modal-container']}>
         <div className={styles['modal-header']}>
-          <span>New generated quote</span>
+          <span>New quote</span>
           <button className={styles['modal-close-button']} onClick={handleCloseModal}>X</button>
+        </div>
+        <div>
+          { (receivedQuote === null && isQuoteLoading) && <p>Creating your new quote...</p> }
+          { receivedQuote &&
+            <>
+              <div>{ receivedQuote }</div>
+              <button>Download you quote</button>
+            </>
+          }
         </div>
       </div>
     </Modal>
