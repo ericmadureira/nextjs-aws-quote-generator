@@ -3,12 +3,13 @@ import React from 'react'
 import { Modal } from '@mui/material'
 
 import styles from './QuoteResultModal.module.css'
+import Image from 'next/image'
 
 interface QuoteResultModalProps {
   isModalOpen: boolean
   handleCloseModal: () => void
   isQuoteLoading: boolean
-  receivedQuote: string | null
+  blobURL: string | null
   handleDownload: () => void
 }
 
@@ -16,7 +17,8 @@ const QuoteResultModal = ({
   isModalOpen,
   handleCloseModal,
   isQuoteLoading,
-  receivedQuote,
+  blobURL,
+  handleDownload,
 }: QuoteResultModalProps) => {
   return (
     <Modal
@@ -32,12 +34,12 @@ const QuoteResultModal = ({
           <span>New quote</span>
           <button className={styles['modal-close-button']} onClick={handleCloseModal}>X</button>
         </div>
-        <div>
-          { (receivedQuote === null && isQuoteLoading) && <p>Creating your new quote...</p> }
-          { receivedQuote &&
+        <div className={styles['modal-result']}>
+          { (blobURL === null && isQuoteLoading) && <p>Creating your new quote...</p> }
+          { blobURL &&
             <>
-              <div>{ receivedQuote }</div>
-              <button>Download you quote</button>
+              <Image src={blobURL} alt='generated quote card' width={580} height={360} />
+              <button className={styles['modal-download-button']} onClick={handleDownload}>Download quote</button>
             </>
           }
         </div>

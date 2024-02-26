@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 750px;
   height: 500px;
-  border: 2px solid black;
+  border: 1px solid black;
   border-radius: 10px;
   background-color: white;
   padding: 20px;
@@ -13,14 +13,32 @@
   align-self: flex-end;
 }
 
+.modal-download-button {
+  align-self: flex-end;
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 6px;
+  margin-top: 4px;
+  font-weight: bold;
+}
+
 .modal-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: bold;
 }
 
 .modal-backdrop {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.modal-result {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
 }
